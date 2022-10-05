@@ -1,7 +1,10 @@
-// ignore_for_file: non_constant_identifier_names, must_be_immutable
+// ignore_for_file: non_constant_identifier_names, must_be_immutable, use_build_context_synchronously
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rss_feed/screens/webview.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:webfeed/webfeed.dart';
 import 'package:http/http.dart' as http;
@@ -58,6 +61,7 @@ class ReusedPageState extends State<ReusedPage> {
     try {
       final client = http.Client();
       final response = await client.get(Uri.parse(widget.url));
+      log(response.bodyBytes.toString());
       return RssFeed.parse(response.body);
     } catch (e) {
       //
@@ -108,14 +112,24 @@ class ReusedPageState extends State<ReusedPage> {
                           final item = _feed!.items![index];
                           return InkWell(
                             onTap: () async {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => WebviewScreen(
-                                          urlTitle: widget.title,
-                                          urlLink: item.link!,
-                                        )),
-                              );
+                              try {
+                                bool isde =
+                                    await canLaunchUrl(Uri.parse(item.link!));
+                                if (isde) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => WebviewScreen(
+                                              urlTitle: widget.title,
+                                              urlLink: item.link!,
+                                            )),
+                                  );
+                                }
+                              } catch (e) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                    content: Text(
+                                        "This Post Was Deleted on the server !!")));
+                              }
                             },
                             child: Container(
                               height: 200,
