@@ -233,7 +233,7 @@ class RSS extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ReusedPage(
-      url: 'https://www.indiatoday.in/rss-video',
+      url: 'https://www.news18.com/rss/music.xml',
       title: worldTitle,
     ));
   }
