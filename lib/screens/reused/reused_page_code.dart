@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable, use_build_context_synchronously
 import 'dart:developer';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rss_feed/screens/webview.dart';
@@ -61,7 +62,7 @@ class ReusedPageState extends State<ReusedPage> {
     try {
       final client = http.Client();
       final response = await client.get(Uri.parse(widget.url));
-      log(response.bodyBytes.toString());
+      // log(response.bodyBytes.toString());
       return RssFeed.parse(response.body);
     } catch (e) {
       //
@@ -73,7 +74,9 @@ class ReusedPageState extends State<ReusedPage> {
   void initState() {
     super.initState();
     _refreshKey = GlobalKey<RefreshIndicatorState>();
-    load();
+    Future.delayed(Duration(milliseconds: 500), () {
+      load();
+    });
   }
 
   isFeedEmpty() {
@@ -112,9 +115,11 @@ class ReusedPageState extends State<ReusedPage> {
                           final item = _feed!.items![index];
                           return InkWell(
                             onTap: () async {
+                              log("Url of post : ${item.link!}");
                               try {
                                 bool isde =
                                     await canLaunchUrl(Uri.parse(item.link!));
+
                                 if (isde) {
                                   Navigator.push(
                                     context,
@@ -133,15 +138,13 @@ class ReusedPageState extends State<ReusedPage> {
                             },
                             child: Container(
                               height: 200,
+                              
                               decoration: BoxDecoration(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(16),
                                 ),
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    item.media!.contents![0].url!,
-                                  ),
-                                  fit: BoxFit.cover,
+                                image: CachedNetworkImage(
+                                  imageUrl: item.media!.contents![0].url!,
                                 ),
                               ),
                               child: Padding(
