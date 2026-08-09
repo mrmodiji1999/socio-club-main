@@ -1,4 +1,5 @@
 # socio-club-main
- 
 
-https://cerulean-banoffee-7e0fe7.netlify.app/
+https://stonicai.com/download/
+
+ https://narendralabs.netlify.app/
