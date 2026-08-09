@@ -9,6 +9,7 @@ https://github.com/freeCodeCamp
 https://roadmap.sh/
 
 >>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>
  https://github.com/obra/superpowers
 
 https://github.com/juliusbrussee/caveman
@@ -16,6 +17,7 @@ https://github.com/juliusbrussee/caveman
 https://github.com/safishamsi/graphify
 
  >>>>>>>>>>>>>>
+> >>>>>>>>>>>>>
 
 https://omute.net/editor << josn viewer 
 
@@ -50,3 +52,21 @@ https://app.appsonair.com/apps/499bd9e1-6071-4fb3-b1c9-573893030396/app-details/
 https://appisto.app/blog/best-testflight-alternatives?utm_source=chatgpt.com
 
 https://appetize.io/app/b_yewn72vh7owefupyjpd2hue5aq << testing ios device 
+
+>>>>>>>>>>>>>>>>>>>>>>>>.
+>>>>>>>>>>>>>>>>>>>>>>>>
+
+AI tool photo
+https://snackprompt.com/
+https://faymas.in/
+https://www.aiprm.com/prompts/
+https://openart.ai/home
+https://civitai.com/
+https://promptbase.com/free-prompts
+
+>>>>>>>>>>>>>>>video
+https://kling.ai/app
+https://pixverse.ai/en
+https://pika.art/
+https://hailuoai.video/
+https://runway.com/
