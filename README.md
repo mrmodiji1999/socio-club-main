@@ -4,6 +4,12 @@ Maine aapke list ko clean karke **proper categories + structure** mein arrange k
 
 ## 🤖 AI & Developer Tools
 
+
+https://console.groq.com/keys
+https://openrouter.ai/workspaces/default
+https://omniroute.online/
+
+
 * [Stonic AI](https://stonicai.com/download/?utm_source=chatgpt.com)
 * [FreeCodeCamp](https://github.com/freeCodeCamp?utm_source=chatgpt.com)
 * [Developer Roadmaps](https://roadmap.sh/?utm_source=chatgpt.com)
