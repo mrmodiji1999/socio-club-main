@@ -8,6 +8,7 @@ Maine aapke list ko clean karke **proper categories + structure** mein arrange k
 https://console.groq.com/keys
 https://openrouter.ai/workspaces/default
 https://omniroute.online/
+https://ollama.com/
 
 
 * [Stonic AI](https://stonicai.com/download/?utm_source=chatgpt.com)
