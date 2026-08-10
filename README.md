@@ -12,6 +12,8 @@ Maine aapke list ko clean karke **proper categories + structure** mein arrange k
 * [Ponytail](https://github.com/DietrichGebert/ponytail?utm_source=chatgpt.com)
 * [Graphify](https://github.com/safishamsi/graphify?utm_source=chatgpt.com)
 
+* https://github.com/ShareX/ShareX
+
 ## 🧑‍💻 Personal / Portfolio
 
 * [Narendra Labs](https://narendralabs.netlify.app/?utm_source=chatgpt.com)
